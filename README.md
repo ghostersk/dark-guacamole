@@ -4,7 +4,7 @@
 This guide is to add persistent CSS for docker-compose deployement
 - tested on Guacamole 1.5.5
 - if there is future update, it may require removal of the `guac_www` volumne before recreating guacamole container and repeating steps bellow
-- or you may be ok to download just latest `guacamole-x.x.x.war` from `https://guacamole.apache.org/releases`
+- or you may be ok to download just latest `guacamole-x.x.x.war` from `https://guacamole.apache.org/releases` and add the custom css with inserting its stylesheet html to all html files.
 
 ## Usage
 First you need to map to volume the `/opt/guacamole` for guacamole container
