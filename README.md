@@ -22,7 +22,7 @@ services:
         - guac_www:/opt/guacamole
        ... rest of your code
 ```
-Next step is to create `ustomcss.css` file inside of this within folder `extracted`
+Next step is to create `customcss.css` file inside of this within folder `extracted`
 - i did it on host, as there is no nano in docker ( you can install it with apt update && apt install nano )
 - on host where is the volume location, in my case `/opt/guacamole/www` run `mkdir extracted`
 - then nano `customcss.css` and copy there the customcss from repo, or just download it there
