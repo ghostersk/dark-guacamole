@@ -1,6 +1,11 @@
 # dark-guacamole
 :lipstick: A dark theme for [Apache Guacamole](https://guacamole.apache.org/).
 
+This guide is to add persistent CSS for docker-compose deployement
+- tested on Guacamole 1.5.5
+- if there is future update, it may require removal of the `guac_www` volumne before recreating guacamole container and repeating steps bellow
+- or you may be ok to download just latest `guacamole-x.x.x.war` from `https://guacamole.apache.org/releases`
+
 ## Usage
 First you need to map to volume the `/opt/guacamole` for guacamole container
 ```
@@ -25,7 +30,7 @@ services:
 Next step is to create `customcss.css` file inside of this within folder `extracted`
 - i did it on host, as there is no nano in docker ( you can install it with apt update && apt install nano )
 - on host where is the volume location, in my case `/opt/guacamole/www` run `mkdir extracted`
-- then nano `customcss.css` and copy there the customcss from repo, or just download it there
+- then nano `customcss.css` and copy there the customcss from repo, or just download it there `wget https://raw.githubusercontent.com/ghostersk/dark-guacamole/refs/heads/master/customcss.css`
 
 Next we open shell to container as root:
 ```
